@@ -56,8 +56,8 @@ install_dependencies() {
  log_info "Установка сетевых зависимостей: wget, procps, iproute2, dnsmasq, iptables..."
  sudo apt-get install -y wget procps iproute2 dnsmasq iptables bash || log_error "Не удалось установить сетевые зависимости."
 
- log_info "Установка GUI и утилит: xorg, openbox, tint2, gedit, policykit-1..."
- sudo apt-get install -y xorg openbox tint2 gedit policykit-1 desktop-file-utils || log_error "Не удалось установить графические компоненты."
+ log_info "Установка GUI и утилит: xorg, openbox, tint2, gedit, polkitd..."
+ sudo apt-get install -y xorg openbox tint2 gedit polkitd desktop-file-utils || log_error "Не удалось установить графические компоненты."
 
  log_info "Отключение стандартной службы dnsmasq..."
  sudo systemctl disable dnsmasq &>/dev/null || log_warn "Не удалось отключить dnsmasq."
