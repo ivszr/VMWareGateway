@@ -431,7 +431,7 @@ Description=Linux as router service
 After=network.target
 [Service]
 Type=simple
-ExecStart=$lnxrouter_path -i $LAN_INTERFACE -o singbox_tun
+ExecStart=$lnxrouter_path -i $LAN_INTERFACE -g 192.168.133.1 -o singbox_tun
 Restart=always
 RestartSec=5
 [Install]
